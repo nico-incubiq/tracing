@@ -216,8 +216,9 @@ mod expand;
 /// also be specified *without* values. Doing so will result in an [empty field]
 /// whose value may be recorded later within the function body.
 ///
-/// Note that defining a field with the same name as a (non-explicitly-skipped)
-/// argument will implicitly skip the argument.
+/// Note that defining a field with the same name as a (non-skipped)
+/// argument will implicitly skip the argument, or even panic if using
+/// constants as field names.
 ///
 /// ## Examples
 ///
